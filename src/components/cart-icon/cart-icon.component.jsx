@@ -8,8 +8,8 @@ const CartIcon = () => {
   const { toggleCart, cartCount } = useContext(CartContext);
 
   return (
-    <div className="cart-icon-container">
-      <ShoppingIcon className="shopping-icon" onClick={toggleCart} />
+    <div className="cart-icon-container" onClick={toggleCart}>
+      <ShoppingIcon className="shopping-icon" />
       <span className="item-count">{cartCount}</span>
     </div>
   );
