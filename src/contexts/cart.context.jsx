@@ -8,11 +8,11 @@ export const CartContext = createContext({
 export const CartProvider = ({ children }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const toggleVisibility = () => {
+  const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
   };
 
-  const value = { isCartOpen, toggleVisibility };
+  const value = { isCartOpen, toggleCart };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
