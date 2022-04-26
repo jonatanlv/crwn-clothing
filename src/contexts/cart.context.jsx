@@ -82,7 +82,7 @@ export const CartProvider = ({ children }) => {
     );
     dispatch(
       CartActionTypes.UPDATE_CART_ITEMS.action({
-        cartItems,
+        cartItems: newCartItems,
         cartCount,
         cartTotal,
       })
