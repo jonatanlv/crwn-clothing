@@ -10,7 +10,6 @@ export const selectCategories = createSelector(
 export const selectCategoriesMap = createSelector(
   [selectCategories],
   (categories) => {
-    console.log("selector fired");
     return categories.reduce((acc, docSnapshot) => {
       const { title, items } = docSnapshot;
       acc[title.toLowerCase()] = items;
