@@ -1,7 +1,8 @@
+import { action } from "../../utils/reducer/reducer.utils";
 import { CartActionTypes } from "./cart.types";
 
 export const toggleCart = () => {
-  return CartActionTypes.TOGGLE_CART.action();
+  return action(CartActionTypes.TOGGLE_CART);
 };
 
 const addCartItem = (cartItems, productToAdd) => {
@@ -33,7 +34,7 @@ const clearCartItem = (cartItems, productToClear) => {
 };
 
 const updateCart = (cartItems) => {
-  return CartActionTypes.UPDATE_CART_ITEMS.action(cartItems);
+  return action(CartActionTypes.UPDATE_CART_ITEMS, cartItems);
 };
 
 export const addItemToCart = (cartItems, productToAdd) => {

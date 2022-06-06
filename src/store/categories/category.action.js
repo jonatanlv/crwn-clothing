@@ -1,13 +1,14 @@
+import { action } from "../../utils/reducer/reducer.utils";
 import { CategoryActionTypes } from "./category.types";
 
 export const fetchCategoriesStart = () => {
-  return CategoryActionTypes.FETCH_CATEGORIES_START.action();
+  return action(CategoryActionTypes.FETCH_CATEGORIES_START);
 };
 
 export const fetchCategoriesSuccess = (categoriesArray) => {
-  return CategoryActionTypes.FETCH_CATEGORIES_SUCCESS.action(categoriesArray);
+  return action(CategoryActionTypes.FETCH_CATEGORIES_SUCCESS, categoriesArray);
 };
 
 export const fetchCategoriesFailed = (error) => {
-  return CategoryActionTypes.FETCH_CATEGORIES_FAILED.action(error);
+  return action(CategoryActionTypes.FETCH_CATEGORIES_FAILED, error);
 };
