@@ -3,9 +3,8 @@ import { Outlet } from "react-router-dom";
 
 import { selectCartIsCartOpen } from "../../store/cart/cart.selector";
 import { selectCurrentUser } from "../../store/user/user.selector";
-import { useSelector } from "react-redux";
-
-import { signOutUser } from "../../utils/firebase/firebase.utils";
+import { signOutStart } from "../../store/user/user.action";
+import { useDispatch, useSelector } from "react-redux";
 
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 
@@ -22,9 +21,10 @@ import {
 const Navigation = () => {
   const currentUser = useSelector(selectCurrentUser);
   const isCartOpen = useSelector(selectCartIsCartOpen);
+  const dispatch = useDispatch();
 
-  const signOutHandler = async () => {
-    await signOutUser();
+  const signOutHandler = () => {
+    dispatch(signOutStart());
   };
   return (
     <Fragment>

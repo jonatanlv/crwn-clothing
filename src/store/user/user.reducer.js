@@ -12,7 +12,11 @@ export const userReducer = (state = INITIAL_STATE, action = {}) => {
   switch (type) {
     case UserActionTypes.SIGN_IN_SUCCESS:
       return { ...state, currentUser: payload };
+    case UserActionTypes.SIGN_OUT_SUCCESS:
+      return { ...state, currentUser: null };
     case UserActionTypes.SIGN_IN_FAILED:
+    case UserActionTypes.SIGN_UP_FAILED:
+    case UserActionTypes.SIGN_OUT_FAILED:
       return { ...state, error: payload };
     default:
       return state;
