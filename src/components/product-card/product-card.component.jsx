@@ -13,7 +13,6 @@ const ProductCard = ({ product }) => {
 
   const addProductToCart = () => {
     const addItemToCartAction = addItemToCart(productItems, product);
-    console.log(addItemToCartAction);
     dispatch(addItemToCartAction);
   };
 
