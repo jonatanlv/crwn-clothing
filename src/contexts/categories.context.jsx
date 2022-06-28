@@ -1,7 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 
 import { gql, useQuery } from "@apollo/client";
-import { collection } from "firebase/firestore";
 
 // Actual value
 export const CategoriesContext = createContext({
