@@ -11,7 +11,6 @@ const addCartItem = (cartItems, productToAdd) => {
         : item
     );
   }
-
   return [...cartItems, { ...productToAdd, quantity: 1 }];
 };
 
@@ -82,7 +81,7 @@ export const CartProvider = ({ children }) => {
     );
     dispatch(
       CartActionTypes.UPDATE_CART_ITEMS.action({
-        cartItems,
+        cartItems: newCartItems,
         cartCount,
         cartTotal,
       })
