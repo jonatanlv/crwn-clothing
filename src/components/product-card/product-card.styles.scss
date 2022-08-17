@@ -40,12 +40,30 @@
     font-size: 18px;
 
     .name {
-      width: 90%;
+      flex-shrink: 1;
       margin-bottom: 15px;
     }
+  }
 
-    .price {
-      width: 10%;
+  @media screen and (max-width: 800px) {
+    width: 40vw;
+
+    button {
+      display: block;
+      opacity: unset;
+      padding: 0 10px;
+      min-width: unset;
+    }
+
+    &:hover {
+      img {
+        opacity: unset;
+      }
+
+      button {
+        opacity: unset;
+        min-width: unset;
+      }
     }
   }
 }
