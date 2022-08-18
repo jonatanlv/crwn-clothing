@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import { UserProvider } from "./contexts/user.context";
 import { CategoriesProvider } from "./contexts/categories.context";
 import { CartProvider } from "./contexts/cart.context";
+import * as serviceWorker from "./serviceWorker";
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
@@ -36,3 +37,5 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+serviceWorker.register();
